@@ -7,31 +7,29 @@ import java.util.Properties;
 
 public class AppProperties {
 
-	public String getProperty(String propertyName, String fileName) {
-
-		String propertyValue;
-
+	public String getProperty(String filePath, String propertyName) {
+		String property = null;
 		try {
-			File file = new File(fileName);
+			File file = new File(filePath);
 
 			FileReader fileReader = new FileReader(file);
 
-			Properties properties = new Properties();
+			Properties properties =  new Properties();
 
 			properties.load(fileReader);
 
-			propertyValue = properties.getProperty(propertyName);
-
-			Logs.getLog().getLogger().info("Success reading property : "+propertyName);
-
-		}catch(IOException ex){
-
-			Logs.getLog().getLogger().error("Failed to get property by name : "+propertyName);
-
-			propertyValue = null;
+			property = properties.getProperty(propertyName);
+		}catch(IOException ex) {
+			Logs.getLog().getLogger().error("ERROR --> "+ex.getMessage());
 		}
+		if(property != null) {
+			Logs.getLog().getLogger().info("INFO --> success reading property : "+property);
+		}else {
+			Logs.getLog().getLogger().info("ERROR --> failure reading property : "+property);
+		}
+		return property;
 
-		return propertyValue;
 	}
+
 
 }

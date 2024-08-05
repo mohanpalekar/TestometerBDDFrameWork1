@@ -15,7 +15,7 @@ public class WebDriverFactory {
 
 		AppProperties appProperties = new AppProperties();
 
-		String browserName = appProperties.getProperty("browser", "src/test/resources/test.properties");
+		String browserName = appProperties.getProperty("src/test/resources/test.properties", "browser");
 
 		try {
 
@@ -37,15 +37,19 @@ public class WebDriverFactory {
 					driver = new SafariDriver();
 
 				}else {
-					Logs.getLog().getLogger().error("Invalid browserName : "+browserName);
+					Logs.getLog().getLogger().error("ERROR --> Invalid browserName : "+browserName);
 				}	
 			}
 
 		}catch(Exception ex) {
-			Logs.getLog().getLogger().error("Invalid browserName : "+browserName);
+			Logs.getLog().getLogger().error("ERROR --> Invalid browserName : "+browserName);
 		}
+		if(driver != null) {
+			Logs.getLog().getLogger().info("INFO --> getWebDriverSession is success : "+browserName);
+		}else {
+			Logs.getLog().getLogger().error("ERROR --> getWebDriverSession is failure : "+browserName);
 
-		Logs.getLog().getLogger().error("getWebDriverSession is success : ");
+		}
 		return driver;
 	}
 
