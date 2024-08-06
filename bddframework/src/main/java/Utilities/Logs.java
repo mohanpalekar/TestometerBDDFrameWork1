@@ -7,8 +7,6 @@ public class Logs {
 	
 	private static Logs log = new Logs();
 	
-	private Logger logger = LogManager.getLogger();
-	
 	private Logs() {
 		
 	}
@@ -17,8 +15,8 @@ public class Logs {
 		return log;
 	}
 
-	public Logger getLogger() {
-		return logger;
+	public Logger getLogger(String className) {
+		return LogManager.getLogger(className);
 	}
 
 }

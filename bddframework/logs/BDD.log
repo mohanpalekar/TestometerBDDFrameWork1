@@ -1,6 +1,0 @@
-[INFO ] 2024-08-05 20:37:30.768 [main] Logs - INFO --> success reading property : firefox
-[INFO ] 2024-08-05 20:37:30.774 [main] Logs - INFO --> success reading property : firefox
-[ERROR] 2024-08-05 20:37:37.062 [main] Logs - ERROR --> getWebDriverSession is failure : firefox
-[INFO ] 2024-08-05 20:37:37.334 [main] Logs - INFO --> success reading property : https://petsfoods.shop/
-[INFO ] 2024-08-05 20:37:41.337 [main] Logs - launchSession is success
-[INFO ] 2024-08-05 20:37:42.392 [main] Logs - clearSession is success
