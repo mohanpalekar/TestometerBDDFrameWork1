@@ -9,8 +9,6 @@ import io.cucumber.java.Scenario;
 
 public class BaseClass {
 
-	AppProperties appProperties = new AppProperties();
-
 	WebDriverFactory webDriverFactory = new WebDriverFactory();
 
 	//start when test case starts
@@ -21,9 +19,9 @@ public class BaseClass {
 
 		DriverFactory.getInstance().getWebDriver().manage().window().maximize();
 
-		DriverFactory.getInstance().getWebDriver().get(appProperties.getProperty("src/test/resources/test.properties", "siteUrl"));
+		DriverFactory.getInstance().getWebDriver().get(AppProperties.getProperty("src/test/resources/test.properties", "siteUrl"));
 
-		Logs.getLog().getLogger().info("launchSession is success");
+		Logs.getLog().getLogger("BaseClass").info("launchSession is success");
 	}
 
 	//start when test case ends
@@ -38,12 +36,12 @@ public class BaseClass {
 
 			scenario.attach(screenshot, "image/png", scenario.getName());
 
-			Logs.getLog().getLogger().info("screenshot is captured");
+			Logs.getLog().getLogger("BaseClass").info("screenshot is captured");
 		}
 
 		DriverFactory.getInstance().closeBrowser();
 
-		Logs.getLog().getLogger().info("clearSession is success");
+		Logs.getLog().getLogger("BaseClass").info("clearSession is success");
 	}
 
 }
