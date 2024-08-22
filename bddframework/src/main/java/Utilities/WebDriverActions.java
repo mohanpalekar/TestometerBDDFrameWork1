@@ -62,5 +62,9 @@ public class WebDriverActions {
 		removeHightLight(element);
 		pause();
 	}
+	
+	public String getCurrentUrl() {
+		return driver.getCurrentUrl();
+	}
 
 }
