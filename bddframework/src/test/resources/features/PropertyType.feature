@@ -1,6 +1,6 @@
 @Regression @Sanity
 Feature: Browse By Property Types
-  
+  @Test2
   Scenario: Verify that user is able to see Browse By Property Types
     Given I am on the landing page
     And I close the popup when I see it
@@ -9,6 +9,7 @@ Feature: Browse By Property Types
     Then I see Browse By Property Types Resorts
     Then I see Browse By Property Types Villas
 
+  @Test3 
   Scenario Outline: Verify that user is able to see Browse By Property Types
     Given I am on the landing page
     And I close the popup when I see it
