@@ -16,10 +16,11 @@ public class WebDriverActions {
 	
 	private JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver; 
 	
-	long timeOut = Long.parseLong(AppProperties.getProperty("src/test/resources/test.properties", "timeOut"));
+	//long timeOut = Long.parseLong(AppProperties.getProperty("src/test/resources/test.properties", "timeOut"));
+	long timeOut = Long.parseLong(System.getProperty("timeOut"));
 	
-	long timeOutInMillis = Long.parseLong(AppProperties.getProperty("src/test/resources/test.properties", "timeOutInMillis"));
-
+	//long timeOutInMillis = Long.parseLong(AppProperties.getProperty("src/test/resources/test.properties", "timeOutInMillis"));
+	long timeOutInMillis = Long.parseLong(System.getProperty("timeOutInMillis"));
 	
 	private WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(timeOut));
 	

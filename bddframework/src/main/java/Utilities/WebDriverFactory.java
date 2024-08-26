@@ -13,7 +13,11 @@ public class WebDriverFactory {
 
 		WebDriver driver = null;
 
-		String browserName = AppProperties.getProperty("src/test/resources/test.properties", "browser");
+		//String browserName = AppProperties.getProperty("src/test/resources/test.properties", "browser");
+		
+		Logs.getLog().getLogger("WebDriverFactory").info(System.getProperty("browser"));
+		
+		String browserName = System.getProperty("browser");
 
 		try {
 

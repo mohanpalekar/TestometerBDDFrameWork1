@@ -19,9 +19,9 @@ public class BaseClass {
 
 		DriverFactory.getInstance().getWebDriver().manage().window().maximize();
 
-		DriverFactory.getInstance().getWebDriver().get(AppProperties.getProperty("src/test/resources/test.properties", "siteUrl"));
+		//DriverFactory.getInstance().getWebDriver().get(AppProperties.getProperty("src/test/resources/test.properties", "siteUrl"));
 
-		DriverFactory.getInstance().getWebDriver().get(AppProperties.getProperty("src/test/resources/test.properties", "siteUrl"));
+		DriverFactory.getInstance().getWebDriver().get(System.getProperty("siteUrl"));
 		
 		Logs.getLog().getLogger("BaseClass").info("launchSession is success");
 	}
