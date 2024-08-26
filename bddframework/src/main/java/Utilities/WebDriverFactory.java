@@ -2,6 +2,7 @@ package Utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -14,33 +15,39 @@ public class WebDriverFactory {
 		WebDriver driver = null;
 
 		//String browserName = AppProperties.getProperty("src/test/resources/test.properties", "browser");
-		
+
 		Logs.getLog().getLogger("WebDriverFactory").info(System.getProperty("browser"));
-		
-		String browserName = System.getProperty("browser");
+
+		String browserName = System.getProperty("browser").toLowerCase();
 
 		try {
 
-			if(browserName != null) {
-				if(browserName.equalsIgnoreCase("chrome")) {
+			switch(browserName) {
 
-					WebDriverManager.chromedriver().setup();
+			case "chrome":
+				WebDriverManager.chromedriver().setup();
+				driver = new ChromeDriver();
+				break;
 
-					driver = new ChromeDriver();
+			case "firefox":
+				WebDriverManager.firefoxdriver().setup();
+				driver = new FirefoxDriver();
+				break;
 
-				}else if(browserName.equalsIgnoreCase("firefox")) {
-					WebDriverManager.firefoxdriver().setup();
+			case "edge":
+				WebDriverManager.edgedriver().setup();
+				driver = new EdgeDriver();
+				break;
 
-					driver = new FirefoxDriver();
+			case "safari":
+				WebDriverManager.safaridriver().setup();
+				driver = new SafariDriver();
+				break;
 
-				}else if(browserName.equalsIgnoreCase("safari")) {
-					WebDriverManager.safaridriver().setup();
+			default:
+				Logs.getLog().getLogger("WebDriverFactory").error("ERROR --> Invalid browserName : "+browserName);
 
-					driver = new SafariDriver();
 
-				}else {
-					Logs.getLog().getLogger("WebDriverFactory").error("ERROR --> Invalid browserName : "+browserName);
-				}	
 			}
 
 		}catch(Exception ex) {
