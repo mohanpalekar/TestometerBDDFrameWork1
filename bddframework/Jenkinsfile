@@ -6,7 +6,9 @@ pipeline {
             steps {
  
                 // To run Maven on a Windows agent, use
-                bat "mvn -D clean test"
+                dir('bddframework'){
+                bat 'mvn verify -Dbrowser=Chrome -DsiteUrl=https://www.booking.com/ -DtimeOut=15 -DtimeOutInMillis=200 -Dcucumber.filter.tags="@Test2"'
+                }
             }
  
             post {
@@ -28,5 +30,14 @@ pipeline {
                 }
             }
         }
+        stage('Notify') {
+            steps {
+ 
+                // To run Maven on a Windows agent, use
+                dir('bddframework'){
+                bat 'mvn exec:java -D"exec.mainClass"="Utilities.SendEmail" -DemailHost=smtp.gmail.com -DemailPort=587 -DtoEmail=palekarvivek6@gmail.com -DemailApp="zmdw whoh jsal tqvp" -DfromEmail=nikki17rajurkar@gmail.com -DemailPDF=/target/PDFReport/ExtentPdf.pdf'    
+                }
+            }
     }
+  }
 }
