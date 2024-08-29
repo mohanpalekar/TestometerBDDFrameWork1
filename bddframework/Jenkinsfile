@@ -7,7 +7,7 @@ pipeline {
  
                 // To run Maven on a Windows agent, use
                 dir('bddframework'){
-                bat 'mvn verify -Dbrowser=Chrome -DsiteUrl=https://www.booking.com/ -DtimeOut=15 -DtimeOutInMillis=200 -Dcucumber.filter.tags="@Test2"'
+                bat 'mvn verify -Dbrowser=Chrome -DsiteUrl=https://www.booking.com/ -DtimeOut=15 -DtimeOutInMillis=200 -Dcucumber.filter.tags="@Regression"'
                 }
             }
  
@@ -15,7 +15,7 @@ pipeline {
                  
                 // If Maven was able to run the tests, even if some of the test
                 // failed, record the test results and archive the jar file.
-                success {
+                always {
                         cucumber buildStatus: 'null', 
                         customCssFiles: '', 
                         customJsFiles: '', 
@@ -27,17 +27,12 @@ pipeline {
                         skippedStepsNumber: -1, 
                         sortingMethod: 'ALPHABETICAL', 
                         undefinedStepsNumber: -1
+
+                        dir('bddframework'){
+                        bat 'mvn exec:java -D"exec.mainClass"="Utilities.SendEmail" -DemailHost=smtp.gmail.com -DemailPort=587 -DtoEmail=palekarvivek6@gmail.com -DemailApp="zmdw whoh jsal tqvp" -DfromEmail=nikki17rajurkar@gmail.com -DemailPDF=/target/PDFReport/ExtentPdf.pdf'    
+                    }
                 }
             }
         }
-        stage('Notify') {
-            steps {
- 
-                // To run Maven on a Windows agent, use
-                dir('bddframework'){
-                bat 'mvn exec:java -D"exec.mainClass"="Utilities.SendEmail" -DemailHost=smtp.gmail.com -DemailPort=587 -DtoEmail=palekarvivek6@gmail.com -DemailApp="zmdw whoh jsal tqvp" -DfromEmail=nikki17rajurkar@gmail.com -DemailPDF=/target/PDFReport/ExtentPdf.pdf'    
-                }
-            }
-    }
   }
 }
