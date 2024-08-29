@@ -9,11 +9,12 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features={"src/test/resources/features"},
 		glue={"stepDefinitions", "Utilities"},
-		tags="@Test4",
+		tags="@Test2",
 		dryRun=false,
 		monochrome = true,
 		plugin= {"pretty", "html:target/HTMLReports.html", "json:target/JSON/cucumber.json",
-				"junit:target/cucumber-reports/Cucumber.xml", "rerun:target/rerun.txt"})
+				"junit:target/cucumber-reports/Cucumber.xml", "rerun:target/rerun.txt",
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"})
 
 
 public class Runner {

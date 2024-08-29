@@ -1,0 +1,5 @@
+[INFO ] 2024-08-29 13:31:30.034 [main] Logs - {BaseClass} Deleted ---> C:\Users\palek\git\TestometerBDDFrameWork1\bddframework\target\PDFReport\ExtentPdf.pdf
+[INFO ] 2024-08-29 13:31:30.222 [main] Logs - null
+[INFO ] 2024-08-29 13:31:31.440 [main] Logs - {WebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-08-29 13:31:57.418 [main] Logs - {BaseClass} launchSession is success
+[INFO ] 2024-08-29 13:32:15.525 [main] Logs - {BaseClass} clearSession is success
