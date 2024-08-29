@@ -16,7 +16,7 @@ public class WebDriverFactory {
 
 		//String browserName = AppProperties.getProperty("src/test/resources/test.properties", "browser");
 
-		Logs.getLog().getLogger("WebDriverFactory").info(System.getProperty("browser"));
+		Logs.getLog().getLogger().info("{WebDriverFactory} " +System.getProperty("browser"));
 
 		String browserName = System.getProperty("browser").toLowerCase();
 
@@ -45,18 +45,18 @@ public class WebDriverFactory {
 				break;
 
 			default:
-				Logs.getLog().getLogger("WebDriverFactory").error("ERROR --> Invalid browserName : "+browserName);
+				Logs.getLog().getLogger().error("{WebDriverFactory} ERROR --> Invalid browserName : "+browserName);
 
 
 			}
 
 		}catch(Exception ex) {
-			Logs.getLog().getLogger("WebDriverFactory").error("ERROR --> Invalid browserName : "+browserName);
+			Logs.getLog().getLogger().error("{WebDriverFactory} ERROR --> Invalid browserName : "+browserName);
 		}
 		if(driver != null) {
-			Logs.getLog().getLogger("WebDriverFactory").info("INFO --> getWebDriverSession is success : "+browserName);
+			Logs.getLog().getLogger().info("{WebDriverFactory} INFO --> getWebDriverSession is success : "+browserName);
 		}else {
-			Logs.getLog().getLogger("WebDriverFactory").error("ERROR --> getWebDriverSession is failure : "+browserName);
+			Logs.getLog().getLogger().error("{WebDriverFactory} ERROR --> getWebDriverSession is failure : "+browserName);
 
 		}
 		return driver;

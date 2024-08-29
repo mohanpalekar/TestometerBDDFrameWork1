@@ -66,6 +66,22 @@
 			<version>2.23.1</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.eclipse.angus/angus-mail -->
+		<dependency>
+			<groupId>org.eclipse.angus</groupId>
+			<artifactId>angus-mail</artifactId>
+			<version>2.0.3</version>
+		</dependency>
+
+		<!--
+		https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+		<dependency>
+			<groupId>tech.grasshopper</groupId>
+			<artifactId>extentreports-cucumber7-adapter</artifactId>
+			<version>1.14.0</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>

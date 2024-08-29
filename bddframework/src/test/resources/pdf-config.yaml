@@ -1,0 +1,76 @@
+passColor: 15AF1F
+failColor: E3501F
+skipColor: 96918F
+displayFeature: true
+displayScenario: true
+displayDetailed: true
+displayAttached: true
+displayExpanded: false
+
+dashboardConfig:
+   title: Cucumber PDF Report
+   dataBackgroundColor: 4F0CC8
+   titleColor: FF0000
+   dateColor: 969696
+   timeColor: 000000
+   dial:
+      featureRanges: 60 95
+      scenarioRanges: 70 90
+      stepRanges: 75 85
+      badColor: B81F8E
+      averageColor: B8961F
+      goodColor: 1FB84A
+      
+summaryConfig:
+   totalColor: ffbf00
+   durationColor: ffbf00
+   
+tagConfig:
+   totalColor: ffbf00
+   
+featureConfig:
+   totalColor: ffbf00
+   durationColor: ffbf00
+   
+scenarioConfig:
+   totalColor: ffbf00
+   durationColor: ffbf00
+   
+detailedFeatureConfig:
+   featureNameColor: ffbf00
+   startEndTimeColor: 000000
+   tagColor: 404040
+   dataHeaderColor: FFFFFF
+   dataBackgroundColor: 404040
+   totalColor: 0000FF
+   durationColor: FFFFFF
+   durationBackgroundColor: 404040   
+   
+detailedScenarioConfig:
+   featureNameColor: 404040
+   scenarioNameColor: ffbf00
+   startEndTimeColor: 000000
+   tagColor: 404040
+   dataHeaderColor: FFFFFF
+   dataBackgroundColor: 404040
+   totalColor: 0000FF
+   durationColor: FFFFFF
+   durationBackgroundColor: 404040
+   stepChartBarColor: 7f32a8
+   
+detailedStepHookConfig:
+   stepTextColor: 0000FF
+   stepBackgroundColor: FFFFFF
+   hookTextColor: 00FF00
+   hookBackgroundColor: FFFFFF
+   durationColor: ffbf00
+   errorMsgColor: 000000
+   logMsgColor: 000000
+   #skipHooks: true
+   #skipScenarioHooks: false
+   #skipStepHooks: false
+   #skipScenarioBeforeHooks: false
+   #skipScenarioAfterHooks: false
+   #skipStepBeforeHooks: false
+   #skipStepAfterHooks: false
+   

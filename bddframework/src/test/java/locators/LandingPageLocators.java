@@ -2,7 +2,6 @@ package locators;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 
@@ -53,7 +52,7 @@ public class LandingPageLocators extends WebDriverActions{
 			}
 
 		}catch(TimeoutException ex) {
-			Logs.getLog().getLogger("LandingPageLocators").error("PopUp is not displayed");	
+			Logs.getLog().getLogger().error("{LandingPageLocators} PopUp is not displayed");	
 		}
 	}
 

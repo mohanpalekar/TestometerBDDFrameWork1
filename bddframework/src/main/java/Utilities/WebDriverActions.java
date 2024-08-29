@@ -52,7 +52,7 @@ public class WebDriverActions {
 		try {
 			TimeUnit.MILLISECONDS.sleep(timeOutInMillis);
 		} catch (InterruptedException e) {
-			Logs.getLog().getLogger("WebDriverActions").error("ERROR --> failed to wait : "+e.getMessage());
+			Logs.getLog().getLogger().error("{WebDriverActions} ERROR --> failed to wait : "+e.getMessage());
 		}
 	}
 	
