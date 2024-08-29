@@ -30,5 +30,13 @@ pipeline {
                 }
             }
         }
+        stage('Notify') {
+            steps {
+ 
+                // To run Maven on a Windows agent, use
+                dir('bddframework/src/main/java/Utilities'){
+                bat 'mvn compile exec:java -Dexec.mainClass="Utilities.SendEmail"'
+                }
+            }
     }
 }
