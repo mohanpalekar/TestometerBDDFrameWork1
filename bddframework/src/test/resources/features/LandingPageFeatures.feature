@@ -4,6 +4,7 @@ Feature: Verify landing Page Features
 
    Scenario: Verify that main features is the site are displayed to the user
     Given I am on the landing page
+    And I close the popup when I see it
     Then I see the features called Stays
     Then I see the features called Flights
     Then I see the features called Flights+Hotel
@@ -14,6 +15,7 @@ Feature: Verify landing Page Features
     
     Scenario Outline: Verify that main features is the site are displayed to the user
     Given I am on the landing page
+    And I close the popup when I see it
     Then I see the features called <featureName>
     
     Examples:
@@ -28,27 +30,32 @@ Feature: Verify landing Page Features
     
     Scenario: Verify that main features is the site are displayed to the user
     Given I am on the landing page
+    And I close the popup when I see it
     Then I see the features called Stays
     
     Scenario: Verify that main features is the site are displayed to the user
     Given I am on the landing page
+    And I close the popup when I see it
     Then I see the features called Flights
-    
     
     Scenario: Verify that main features is the site are displayed to the user
     Given I am on the landing page
+    And I close the popup when I see it
     Then I see the features called Flights+Hotel
     
     
     Scenario: Verify that main features is the site are displayed to the user
     Given I am on the landing page
+    And I close the popup when I see it
     Then I see the features called Car rentals
     
     Scenario: Verify that main features is the site are displayed to the user
     Given I am on the landing page
+    And I close the popup when I see it
     Then I see the features called Attractions
     
     Scenario: Verify that main features is the site are displayed to the user
     Given I am on the landing page
+    And I close the popup when I see it
     Then I see the features called Airport taxis
 
