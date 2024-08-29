@@ -11,6 +11,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
+import com.epam.healenium.SelfHealingDriver;
+
 import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
@@ -49,13 +51,15 @@ public class BaseClass {
 
 		totalScenarios++;
 
-		WebDriver currentDriver = DriverFactory.getInstance().getWebDriver();
+		//WebDriver currentDriver = (DriverFactory.getInstance().getWebDriver());
 
 		if(scenario.isFailed()) {
 
 			totalFailedScenarios++;
+			
+			final WebDriver delegatedDriver = ((SelfHealingDriver) DriverFactory.getInstance().getWebDriver()).getDelegate();
 
-			byte [] screenshot = ((TakesScreenshot) currentDriver).getScreenshotAs(OutputType.BYTES);
+			byte [] screenshot = ((TakesScreenshot) delegatedDriver).getScreenshotAs(OutputType.BYTES);
 
 			scenario.attach(screenshot, "image/png", scenario.getName());
 

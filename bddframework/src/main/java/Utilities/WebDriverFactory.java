@@ -6,13 +6,15 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import com.epam.healenium.SelfHealingDriver;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WebDriverFactory {
 
 	public WebDriver getWebDriverSession() {
 
-		WebDriver driver = null;
+		SelfHealingDriver driver = null;
 
 		//String browserName = AppProperties.getProperty("src/test/resources/test.properties", "browser");
 
@@ -22,26 +24,28 @@ public class WebDriverFactory {
 
 		try {
 
+			WebDriver delegate = null;
+
 			switch(browserName) {
 
 			case "chrome":
 				WebDriverManager.chromedriver().setup();
-				driver = new ChromeDriver();
+				delegate = new ChromeDriver();
 				break;
 
 			case "firefox":
 				WebDriverManager.firefoxdriver().setup();
-				driver = new FirefoxDriver();
+				delegate = new FirefoxDriver();
 				break;
 
 			case "edge":
 				WebDriverManager.edgedriver().setup();
-				driver = new EdgeDriver();
+				delegate = new EdgeDriver();
 				break;
 
 			case "safari":
 				WebDriverManager.safaridriver().setup();
-				driver = new SafariDriver();
+				delegate = new SafariDriver();
 				break;
 
 			default:
@@ -49,6 +53,9 @@ public class WebDriverFactory {
 
 
 			}
+
+			//create Self-healing driver
+			driver = SelfHealingDriver.create(delegate);
 
 		}catch(Exception ex) {
 			Logs.getLog().getLogger().error("{WebDriverFactory} ERROR --> Invalid browserName : "+browserName);
