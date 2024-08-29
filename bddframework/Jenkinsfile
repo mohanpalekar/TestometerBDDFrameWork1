@@ -34,9 +34,8 @@ pipeline {
             steps {
  
                 // To run Maven on a Windows agent, use
-                dir('bddframework/src/main/java/Utilities'){
-                bat 'javac SendEmail.class'
-                bat 'java SendEmail'    
+                dir('bddframework'){
+                bat 'mvn exec:java -D"exec.mainClass"="Utilities.SendEmail" -DemailHost=smtp.gmail.com -DemailPort=587 -DtoEmail=palekarvivek6@gmail.com -DemailApp="zmdw whoh jsal tqvp" -DfromEmail=nikki17rajurkar@gmail.com -DemailPDF=/target/PDFReport/ExtentPdf.pdf'    
                 }
             }
     }
