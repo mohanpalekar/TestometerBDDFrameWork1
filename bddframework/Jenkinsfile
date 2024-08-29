@@ -6,7 +6,7 @@ pipeline {
             steps {
  
                 // To run Maven on a Windows agent, use
-                sh "cd bddframework"
+                dir('bddframework')
                 bat "mvn verify -Dbrowser=Chrome -DsiteUrl=https://www.booking.com/ -DtimeOut=15 -DtimeOutInMillis=200 -Dcucumber.filter.tags='@Test2'"
             }
  
