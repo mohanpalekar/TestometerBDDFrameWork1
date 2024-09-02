@@ -54,6 +54,7 @@ public class HealeniumRepository implements HealeniumRepositoryInterface{
 				throw new FailedToStartHealeniumServer("{HealeniumRepository} FailedToStartHealeniumServer");
 			}
 		}
+		Logs.getLog().getLogger().info("{HealeniumRepository} serverData "+serverData);
 		return serverData;
 
 	}
