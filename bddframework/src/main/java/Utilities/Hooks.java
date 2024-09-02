@@ -176,7 +176,7 @@ public class Hooks {
 			props.store(out, "Added test results counts");
 
 		}
-
+		Logs.getLog().getLogger().info("{Hooks} trying to stop healenium server");
 		String command = "taskkill /F /PID "+healeniumServerData[0];
 		File healeniumLogFile = new File("D:\\healenium\\shell-installation\\web\\logs\\healenium-backend.log");
 		Hooks.stopHealeniumServer(healeniumLogFile, command);
