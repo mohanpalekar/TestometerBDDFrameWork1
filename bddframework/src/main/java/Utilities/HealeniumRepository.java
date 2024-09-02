@@ -93,9 +93,9 @@ public class HealeniumRepository implements HealeniumRepositoryInterface{
 
 				while((ch = fr.readLine()) != null) {
 
-					Logs.getLog().getLogger().info("{HealeniumRepository}  : --> "+ch);
-
 					if(ch.contains("Tomcat started on port")) {
+						
+						Logs.getLog().getLogger().info("{HealeniumRepository}  : --> "+ch);
 
 						Logs.getLog().getLogger().info("{HealeniumRepository} isServerRunnng ? : Yes");
 

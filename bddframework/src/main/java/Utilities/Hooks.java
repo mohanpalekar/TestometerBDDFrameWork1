@@ -50,7 +50,7 @@ public class Hooks {
 
 	private WebDriverFactoryInterface driverFactory = new SelfHealingWebDriverFactory(driver);
 
-	private static HealeniumRepositoryInterface healeniumRepository = new HealeniumRepository();
+	private static HealeniumRepositoryInterface Hooks = new HealeniumRepository();
 
 	private String browserName = System.getProperty("browser").toLowerCase();
 	
@@ -67,7 +67,7 @@ public class Hooks {
 
 		String command = "D: && cd D:\\healenium\\shell-installation\\web && \"D:\\healenium\\shell-installation\\web\\start_healenium.sh\""; 
 
-		healeniumServerData = healeniumRepository.startHealeniumServer(files1, command);
+		healeniumServerData = Hooks.startHealeniumServer(files1, command);
 		
 		if(healeniumServerData[0] != -1) {
 			File healenumPropertiesFile = new File(System.getProperty("user.dir")+"\\src\\test\\resources\\healenium.properties");
@@ -179,7 +179,7 @@ public class Hooks {
 
 		String command = "taskkill /F /PID "+healeniumServerData[0];
 		File healeniumLogFile = new File("D:\\healenium\\shell-installation\\web\\logs\\healenium-backend.log");
-		healeniumRepository.stopHealeniumServer(healeniumLogFile, command);
+		Hooks.stopHealeniumServer(healeniumLogFile, command);
 
 	}
 
@@ -232,10 +232,10 @@ public class Hooks {
 
 				while ((line = br.readLine()) != null) {
 					if (line.contains("hlm.server.url = http://localhost:")) {
-						Logs.getLog().getLogger().info("{HealeniumRepository} updating healenium.properties with port : "+healeniumServerData[1]);
+						Logs.getLog().getLogger().info("{Hooks} updating healenium.properties with port : "+healeniumServerData[1]);
 						line = line.replace(line, "hlm.server.url = http://localhost:"+healeniumServerData[1]);
 
-						Logs.getLog().getLogger().info("{HealeniumRepository} updated line --> "+line);
+						Logs.getLog().getLogger().info("{Hooks} updated line --> "+line);
 					}
 					lines.add(line);
 				}
