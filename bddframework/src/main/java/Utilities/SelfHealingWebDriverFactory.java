@@ -8,19 +8,21 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import com.epam.healenium.SelfHealingDriver;
 
+import Interfaces.WebDriverFactoryInterface;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class WebDriverFactory {
+public class SelfHealingWebDriverFactory implements WebDriverFactoryInterface{
 
-	public WebDriver getWebDriverSession() {
+	private SelfHealingDriver driver;
 
-		SelfHealingDriver driver = null;
+	public SelfHealingWebDriverFactory(WebDriver driver) {
+		this.driver = (SelfHealingDriver) driver;
+	}
 
-		//String browserName = AppProperties.getProperty("src/test/resources/test.properties", "browser");
+	@Override
+	public WebDriver getDriver(String browserName) {
 
-		Logs.getLog().getLogger().info("{WebDriverFactory} " +System.getProperty("browser"));
-
-		String browserName = System.getProperty("browser").toLowerCase();
+		Logs.getLog().getLogger().info("{SelfHealingWebDriverFactory} " +System.getProperty("browser"));
 
 		try {
 
@@ -49,24 +51,21 @@ public class WebDriverFactory {
 				break;
 
 			default:
-				Logs.getLog().getLogger().error("{WebDriverFactory} ERROR --> Invalid browserName : "+browserName);
-
-
+				Logs.getLog().getLogger().error("{SelfHealingWebDriverFactory} ERROR --> Invalid browserName : "+browserName);
 			}
 
 			//create Self-healing driver
 			driver = SelfHealingDriver.create(delegate);
 
 		}catch(Exception ex) {
-			Logs.getLog().getLogger().error("{WebDriverFactory} ERROR --> Invalid browserName : "+browserName);
+			Logs.getLog().getLogger().error("{SelfHealingWebDriverFactory} ERROR --> Invalid browserName : "+browserName);
 		}
 		if(driver != null) {
-			Logs.getLog().getLogger().info("{WebDriverFactory} INFO --> getWebDriverSession is success : "+browserName);
+			Logs.getLog().getLogger().info("{SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : "+browserName);
 		}else {
-			Logs.getLog().getLogger().error("{WebDriverFactory} ERROR --> getWebDriverSession is failure : "+browserName);
+			Logs.getLog().getLogger().error("{SelfHealingWebDriverFactory} ERROR --> getWebDriverSession is failure : "+browserName);
 
 		}
 		return driver;
 	}
-
 }

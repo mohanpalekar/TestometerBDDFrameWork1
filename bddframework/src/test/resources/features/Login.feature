@@ -1,4 +1,4 @@
-@Regression @Test1
+@Regression @Test2313
 Feature: Login page scenarios
 
 Scenario: Verify that the login is successful

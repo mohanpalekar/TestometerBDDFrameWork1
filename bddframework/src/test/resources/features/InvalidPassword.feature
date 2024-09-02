@@ -1,4 +1,4 @@
- @Regression  @Sanity
+ @Regression  @Sanity @Test231
 Feature: Invalid Password
  
  

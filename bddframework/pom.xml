@@ -30,12 +30,20 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-core -->
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-core</artifactId>
+			<version>7.18.1</version>
+		</dependency>
+
+
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>4.23.0</version>
+			<version>4.24.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
@@ -51,7 +59,7 @@
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>5.9.1</version>
+			<version>5.9.2</version>
 		</dependency>
 
 		<dependency>
@@ -84,7 +92,7 @@
 		<dependency>
 			<groupId>com.epam.healenium</groupId>
 			<artifactId>healenium-web</artifactId>
-			<version>3.5.2</version>
+			<version>3.5.3</version>
 		</dependency>
 
 
@@ -98,12 +106,12 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.0.0-M3</version>
+					<version>3.5.0</version>
 					<dependencies>
 						<dependency>
 							<groupId>org.apache.maven.surefire</groupId>
 							<artifactId>surefire-junit47</artifactId>
-							<version>3.0.0-M3</version>
+							<version>3.5.0</version>
 						</dependency>
 					</dependencies>
 					<configuration>

@@ -1,4 +1,4 @@
-@Regression @Sanity
+@Regression @Sanity @Test231
 Feature: Browse By Property Types
   @Test2
   Scenario: Verify that user is able to see Browse By Property Types
@@ -6,7 +6,7 @@ Feature: Browse By Property Types
     And I close the popup when I see it
     Then I see Browse By Property Types Hotels
     Then I see Browse By Property Types Apartments
-    Then I see Browse By Property Types Resorts
+    Then I see Browse By Property Types Resorts2
     Then I see Browse By Property Types Villas
 
   @Test3 
@@ -20,6 +20,6 @@ Feature: Browse By Property Types
   |propertyName|
   |Hotels|
   |Apartments|
-  |Resorts|
+  |Resorts2|
   |Villas|  
     

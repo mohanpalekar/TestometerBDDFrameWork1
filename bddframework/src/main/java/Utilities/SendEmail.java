@@ -59,8 +59,9 @@ public class SendEmail {
 		
 		long totalScenarios = Long.parseLong(properties.getProperty("totalScenarios"));
 		long totalFailedScenarios = Long.parseLong(properties.getProperty("totalFailedScenarios"));
+		double timeTaken = Double.parseDouble(properties.getProperty("timeTaken"));
 		
-		final String results = "Total Scenarios Count: "+totalScenarios+"\n Scenarios Passed : "+(totalScenarios-totalFailedScenarios)+"\n Scenarios Failed : "+totalFailedScenarios;
+		final String results = "Total Scenarios Count: "+totalScenarios+"\n Scenarios Passed : "+(totalScenarios-totalFailedScenarios)+"\n Scenarios Failed : "+totalFailedScenarios+"\n Execution Time: "+timeTaken;
 
 		final String msg = "Hi Team, \n Please find the attached report."
 				+ "\n Please review the failures and raise the bugs.\n "+results;

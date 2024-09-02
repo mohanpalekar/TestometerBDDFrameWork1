@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import Utilities.WebDriverActions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -9,9 +10,11 @@ import locators.LoginPageLocators;
 
 public class LoginPageStepDefinition {
 
-	LoginPageLocators register = new LoginPageLocators();
+	private WebDriverActions webDriverActions = new WebDriverActions();
 
-	LandingPageLocators landingpage = new LandingPageLocators();
+	private LoginPageLocators register = new LoginPageLocators(webDriverActions);
+
+	private LandingPageLocators landingpage = new LandingPageLocators(webDriverActions);
 
 	@Given("^I click Login$")
 	public void clickMyAccount() {
@@ -33,7 +36,7 @@ public class LoginPageStepDefinition {
 	public void clickLoginButton() {
 		register.clickLoginButton();
 	}
-	
+
 	@And("^I click Press and Hold when asked if I am Robot$")
 	public void verifyIfRobot() {
 		register.clickPressAndHold();
@@ -43,12 +46,12 @@ public class LoginPageStepDefinition {
 	public void verifyDashboardPage(String userName) {
 		register.verifyUserIsLoggedIn(userName);
 	}
-	
+
 	@Then("^I verify that invalid email address error message is shown to the user$")
 	public void validateInvalidEmailErrorMessage() {
 		register.verifyInvalidEmailMessage();
 	}
-	
+
 	@Then("^I verify that invalid password error message is shown to the user$")
 	public void validateInvalidPasswordErrorMessage() {
 		register.verifyInvalidPasswordMessage();

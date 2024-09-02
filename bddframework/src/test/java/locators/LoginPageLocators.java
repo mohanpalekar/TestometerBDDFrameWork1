@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import Utilities.WebDriverActions;
 
 
-public class LoginPageLocators extends WebDriverActions{
+public class LoginPageLocators{
 	
 	private By userName = By.name("username");
 	
@@ -22,33 +22,39 @@ public class LoginPageLocators extends WebDriverActions{
 	
 	private By invalidPasswordErrorMessage = By.id("password-note");
 	
-	public void enterUsername(String username) {
-		waitUntilVisibilityOfElementLocated(userName).sendKeys(username);
+	private WebDriverActions webDriverActions;
+	
+	public LoginPageLocators(WebDriverActions webDriverActions) {
+		this.webDriverActions = webDriverActions;
+	}
+	
+	public void enterUsername(String username) {	
+		webDriverActions.waitUntilVisibilityOfElementLocated(userName).sendKeys(username);
 	}
 	
 	public void enterPassword(String password) {
-		waitUntilVisibilityOfElementLocated(passWord).sendKeys(password);
+		webDriverActions.waitUntilVisibilityOfElementLocated(passWord).sendKeys(password);
 	}
 	
 	public void clickLoginButton() {
-		waitUntilElementToBeClickable(loginButton).click();
+		webDriverActions.waitUntilElementToBeClickable(loginButton).click();
 	}
 	
 	public void verifyUserIsLoggedIn(String userName) {
-		String loggedInUserName = waitUntilVisibilityOfElementLocated(loginuserName).getText();
+		String loggedInUserName = webDriverActions.waitUntilVisibilityOfElementLocated(loginuserName).getText();
 		Assert.assertEquals(loggedInUserName, userName);
 	}
 	
 	public void clickPressAndHold() {
-		waitUntilElementToBeClickable(verifyIfRobot).click();
+		webDriverActions.waitUntilElementToBeClickable(verifyIfRobot).click();
 	}
 	
 	public void verifyInvalidEmailMessage() {
-		Assert.assertTrue(waitUntilVisibilityOfElementLocated(invalidEmailErrorMessage).isDisplayed());
+		Assert.assertTrue(webDriverActions.waitUntilVisibilityOfElementLocated(invalidEmailErrorMessage).isDisplayed());
 	}
 	
 	public void verifyInvalidPasswordMessage() {
-		Assert.assertTrue(waitUntilVisibilityOfElementLocated(invalidPasswordErrorMessage).isDisplayed());
+		Assert.assertTrue(webDriverActions.waitUntilVisibilityOfElementLocated(invalidPasswordErrorMessage).isDisplayed());
 	}
 
 }

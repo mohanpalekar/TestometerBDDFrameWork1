@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import Utilities.Logs;
 import Utilities.WebDriverActions;
 
-public class LandingPageLocators extends WebDriverActions{
+public class LandingPageLocators{
 
 	private By logInButton = By.xpath("//a[@aria-label='Sign in']");
 
@@ -29,23 +29,29 @@ public class LandingPageLocators extends WebDriverActions{
 	//private By heroBanner = By.xpath("//div[@class='Header_main']");
 
 	private By popUp = By.xpath("//button[starts-with(@aria-label, 'Dismiss')]");
+	
+	private WebDriverActions webDriverActions;
+	
+	public LandingPageLocators(WebDriverActions webDriverActions) {
+		this.webDriverActions = webDriverActions;
+	}
 
 	public void clickLoginButton() {
-		waitUntilElementToBeClickable(logInButton).click();
+		webDriverActions.waitUntilElementToBeClickable(logInButton).click();
 	}
 
 	public void verifyFeatures(String featureName) {
-		Assert.assertTrue(waitUntilVisibilityOfElementLocated(getFeatureByName(featureName)).isDisplayed());
+		Assert.assertTrue(webDriverActions.waitUntilVisibilityOfElementLocated(getFeatureByName(featureName)).isDisplayed());
 	}
 
 	public void verifyLandingPage() {
-		Assert.assertEquals(getCurrentUrl(), "https://www.booking.com/");
+		Assert.assertEquals(webDriverActions.getCurrentUrl(), "https://www.booking.com/");
 	}
 
 	public void closePopUpIfDisplayed() {
 
 		try {
-			WebElement crossPopUp = waitUntilElementToBeClickable(popUp);
+			WebElement crossPopUp = webDriverActions.waitUntilElementToBeClickable(popUp);
 
 			if(crossPopUp.isDisplayed()) {
 				crossPopUp.click();
