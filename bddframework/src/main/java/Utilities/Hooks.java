@@ -32,7 +32,6 @@ import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
 import io.cucumber.plugin.event.PickleStepTestStep;
-import io.cucumber.plugin.event.Step;
 import io.cucumber.plugin.event.TestCase;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.AddressException;
@@ -57,7 +56,7 @@ public class Hooks {
 
 	@BeforeAll
 	public static void cleanOldFiles() throws IOException, InterruptedException, FailedToStartHealeniumServer, InvalidPortException {
-		
+
 		startTime = System.currentTimeMillis();
 
 		File [] files1 = new File[2];
@@ -94,9 +93,9 @@ public class Hooks {
 	@Before
 	public void launchSession(Scenario scenario) throws NoSuchFieldException, SecurityException,
 	IllegalArgumentException, IllegalAccessException, AlreadyFailedTestStepException, DriverFailedToCreateException {
-		
+
 		Logs.getLog().getLogger().info("================================================================================");
-		
+
 		Logs.getLog().getLogger().info("{BaseClass} launching session for scenario "+scenario.getName());
 
 		excludeScenarioWithFailedStep(scenario);
@@ -123,7 +122,6 @@ public class Hooks {
 		if (scenario.isFailed()) {
 			failedSteps.add(GetTestStepName.currentStepName);
 			Logs.getLog().getLogger().error("{BaseClass} ADDED FAILED STEP : "+GetTestStepName.currentStepName+" { Scenario: "+scenario.getName()+" }");
-
 		}
 
 	}
@@ -135,8 +133,6 @@ public class Hooks {
 		if(driver != null) {
 
 			totalScenarios++;
-
-			// WebDriver currentDriver = (DriverFactory.getInstance().getWebDriver());
 
 			if(!isAlreadyFailedTestStep) {
 
@@ -164,7 +160,7 @@ public class Hooks {
 			Logs.getLog().getLogger().error("{BaseClass} clearSession is FAIL for scenario "+scenario.getName());
 
 		}
-		
+
 		Logs.getLog().getLogger().info("================================================================================");
 
 	}
@@ -176,7 +172,7 @@ public class Hooks {
 	public static void setTestResults() throws AddressException, MessagingException, IOException, InterruptedException {
 
 		try (FileOutputStream out = new FileOutputStream("testResults.properties")) {
-			
+
 			finishTime = System.currentTimeMillis();
 
 			Properties props = new Properties();
