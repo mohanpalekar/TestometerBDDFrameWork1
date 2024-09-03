@@ -116,7 +116,7 @@ public class Hooks {
 			throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 
 		if (scenario.isFailed()) {
-			failedSteps.add(GetTestStepName.currentStepName);
+			failedSteps.add(GetTestStepName.currentStepName+" { "+scenario.getName()+" }");
 			Logs.getLog().getLogger().error("{BaseClass} FAILED STEP : "+GetTestStepName.currentStepName);
 
 		}
@@ -183,6 +183,8 @@ public class Hooks {
 		String command = "taskkill /F /PID "+healeniumServerData[0];
 		File healeniumLogFile = new File("D:\\healenium\\shell-installation\\web\\logs\\healenium-backend.log");
 		Hooks.stopHealeniumServer(healeniumLogFile, command);
+		
+		Logs.getLog().getLogger().info("{BaseClass} SUMMARY (All Failed Steps) : ");
 
 	}
 
