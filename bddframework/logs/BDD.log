@@ -1,261 +1,261 @@
-[INFO ] 2024-09-03 12:18:32.451 [main] Logs - {HealeniumRepository} trying to start healenium server
-[INFO ] 2024-09-03 12:18:32.454 [main] Logs - {HealeniumRepository} command is : D: && cd D:\healenium\shell-installation\web && "D:\healenium\shell-installation\web\start_healenium.sh"
-[INFO ] 2024-09-03 12:18:36.489 [main] Logs - {HealeniumRepository} response from command prompt is : null
-[INFO ] 2024-09-03 12:18:41.509 [main] Logs - {HealeniumRepository} Time spent (milliseconds)= 5014
-[INFO ] 2024-09-03 12:18:41.510 [main] Logs - {HealeniumRepository} fileSizeInKb = 5.2783203125
-[INFO ] 2024-09-03 12:18:41.535 [main] Logs - {HealeniumRepository}  : --> 2024-09-03 09:48:41.029  INFO 15744 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat started on port 4596 (http) with context path '' 
-[INFO ] 2024-09-03 12:18:41.535 [main] Logs - {HealeniumRepository} isServerRunnng ? : Yes
-[INFO ] 2024-09-03 12:18:41.535 [main] Logs - {HealeniumRepository} PID is 15744
-[INFO ] 2024-09-03 12:18:41.536 [main] Logs - {HealeniumRepository} portNumber is 4596
-[INFO ] 2024-09-03 12:18:41.536 [main] Logs - {HealeniumRepository} Tomcat running on port 4596
-[INFO ] 2024-09-03 12:18:41.537 [main] Logs - {Hooks} updating healenium.properties with port : 4596
-[INFO ] 2024-09-03 12:18:41.537 [main] Logs - {Hooks} updated line --> hlm.server.url = http://localhost:4596
-[INFO ] 2024-09-03 12:18:41.538 [main] Logs - {BaseClass} Deleted ---> C:\Users\palek\git\TestometerBDDFrameWork1\bddframework\target\PDFReport\ExtentPdf.pdf
-[INFO ] 2024-09-03 12:18:41.708 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:18:41.708 [main] Logs - {BaseClass} launching session for scenario Verify that invalid passwords are identified
-[INFO ] 2024-09-03 12:18:41.709 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:18:43.254 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:18:45.979 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that invalid passwords are identified
-[INFO ] 2024-09-03 12:18:45.984 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:18:46.082 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:18:51.842 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:18:51.846 [main] Logs - {GetTestStepName} Current Step Name ---> I click Login
-[INFO ] 2024-09-03 12:18:56.195 [main] Logs - {GetTestStepName} Current Step Name ---> I enter username as mohanpalekar02@gmail.com
-[INFO ] 2024-09-03 12:18:58.082 [main] Logs - {GetTestStepName} Current Step Name ---> I enter password as 123456
-[INFO ] 2024-09-03 12:18:59.267 [main] Logs - {GetTestStepName} Current Step Name ---> I click on login button
-[INFO ] 2024-09-03 12:18:59.863 [main] Logs - {GetTestStepName} Current Step Name ---> I verify that invalid password error message is shown to the user
-[ERROR] 2024-09-03 12:19:05.131 [main] Logs - {BaseClass} FAILED STEP : I verify that invalid password error message is shown to the user { Scenario: Verify that invalid passwords are identified }
-[INFO ] 2024-09-03 12:19:05.229 [main] Logs - {BaseClass} screenshot is captured
-[INFO ] 2024-09-03 12:19:05.654 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that invalid passwords are identified
-[INFO ] 2024-09-03 12:19:05.654 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:19:05.733 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:19:05.733 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:05.749 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:19:06.538 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:19:08.767 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:08.767 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:19:08.848 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:19:14.900 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:19:14.903 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Stays
-[INFO ] 2024-09-03 12:19:15.452 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Flights
-[INFO ] 2024-09-03 12:19:15.997 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Flights+Hotel
-[INFO ] 2024-09-03 12:19:16.525 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Car rentals
-[INFO ] 2024-09-03 12:19:17.064 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Attractions
-[INFO ] 2024-09-03 12:19:17.598 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Airport taxis
-[INFO ] 2024-09-03 12:19:18.538 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:18.538 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:19:18.542 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:19:18.542 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:18.542 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:19:19.295 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:19:22.112 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:22.113 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:19:22.173 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:19:27.682 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:19:27.683 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Stays
-[INFO ] 2024-09-03 12:19:28.401 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:28.401 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:19:28.405 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:19:28.406 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:28.406 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:19:29.078 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:19:31.686 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:31.687 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:19:31.699 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:19:37.452 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:19:37.453 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Flights
-[INFO ] 2024-09-03 12:19:38.165 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:38.165 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:19:38.165 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:19:38.165 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:38.165 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:19:38.818 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:19:40.891 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:40.891 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:19:40.981 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:19:46.253 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:19:46.254 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Flights+Hotel
-[INFO ] 2024-09-03 12:19:46.962 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:46.962 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:19:46.966 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:19:46.966 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:46.966 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:19:47.626 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:19:49.806 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:49.807 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:19:49.817 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:19:54.941 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:19:54.942 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Car rentals
-[INFO ] 2024-09-03 12:19:55.671 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:55.671 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:19:55.671 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:19:55.671 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:55.671 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:19:56.379 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:19:58.500 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:19:58.500 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:19:58.527 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:20:03.649 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:20:03.649 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Attractions
-[INFO ] 2024-09-03 12:20:04.388 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:04.388 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:20:04.391 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:20:04.392 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:04.392 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:20:05.049 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:20:07.064 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:07.065 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:20:07.076 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:20:12.726 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:20:12.727 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Airport taxis
-[INFO ] 2024-09-03 12:20:13.428 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:13.428 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:20:13.428 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:20:13.428 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:13.428 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:20:14.117 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:20:16.263 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:16.264 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:20:16.276 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:20:21.897 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:20:21.897 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Stays
-[INFO ] 2024-09-03 12:20:22.622 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:22.622 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:20:22.625 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:20:22.625 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:22.625 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:20:23.297 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:20:25.220 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:25.220 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:20:25.246 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:20:30.525 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:20:30.526 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Flights
-[INFO ] 2024-09-03 12:20:31.226 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:31.226 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:20:31.226 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:20:31.226 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:31.226 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:20:31.895 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:20:33.749 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:33.749 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:20:33.805 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:20:39.347 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:20:39.348 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Flights+Hotel
-[INFO ] 2024-09-03 12:20:40.054 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:40.054 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:20:40.054 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:20:40.054 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:40.054 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:20:40.699 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:20:42.960 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:42.960 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:20:42.996 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:20:48.250 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:20:48.252 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Car rentals
-[INFO ] 2024-09-03 12:20:48.949 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:48.949 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:20:48.949 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:20:48.949 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:48.949 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:20:49.624 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:20:51.867 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:51.867 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:20:51.880 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:20:57.585 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:20:57.586 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Attractions
-[INFO ] 2024-09-03 12:20:58.311 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:58.311 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:20:58.316 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:20:58.316 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:20:58.316 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:20:58.978 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:21:00.836 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:21:00.837 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:21:00.856 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:21:06.457 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:21:06.458 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Airport taxis
-[INFO ] 2024-09-03 12:21:07.212 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
-[INFO ] 2024-09-03 12:21:07.212 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:21:07.212 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:21:07.212 [main] Logs - {BaseClass} launching session for scenario Verify that the login is successful
-[INFO ] 2024-09-03 12:21:07.212 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:21:07.882 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:21:10.263 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that the login is successful
-[INFO ] 2024-09-03 12:21:10.264 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:21:10.291 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:21:15.458 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:21:15.459 [main] Logs - {GetTestStepName} Current Step Name ---> I click Login
-[INFO ] 2024-09-03 12:21:18.454 [main] Logs - {GetTestStepName} Current Step Name ---> I enter username as mohanpalekar02@gmail.com
-[INFO ] 2024-09-03 12:21:20.095 [main] Logs - {GetTestStepName} Current Step Name ---> I enter password as Stble1245%
-[INFO ] 2024-09-03 12:21:21.680 [main] Logs - {GetTestStepName} Current Step Name ---> I click on login button
-[INFO ] 2024-09-03 12:21:22.198 [main] Logs - {GetTestStepName} Current Step Name ---> I click Press and Hold when asked if I am Robot
-[INFO ] 2024-09-03 12:21:22.849 [main] Logs - {GetTestStepName} Current Step Name ---> I see Your account is displayed
-[ERROR] 2024-09-03 12:21:23.522 [main] Logs - {BaseClass} FAILED STEP : I see Your account is displayed { Scenario: Verify that the login is successful }
-[INFO ] 2024-09-03 12:21:23.586 [main] Logs - {BaseClass} screenshot is captured
-[INFO ] 2024-09-03 12:21:23.867 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that the login is successful
-[INFO ] 2024-09-03 12:21:23.867 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:21:23.867 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:21:23.867 [main] Logs - {BaseClass} launching session for scenario Verify that user is able to see Browse By Property Types
-[INFO ] 2024-09-03 12:21:23.867 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:21:24.547 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:21:26.473 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
-[INFO ] 2024-09-03 12:21:26.473 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:21:26.496 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:21:32.157 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:21:32.158 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Hotels2
-[ERROR] 2024-09-03 12:21:37.459 [main] Logs - {BaseClass} FAILED STEP : I see Browse By Property Types Hotels2 { Scenario: Verify that user is able to see Browse By Property Types }
-[INFO ] 2024-09-03 12:21:37.459 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Apartments
-[INFO ] 2024-09-03 12:21:37.460 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Resorts
-[INFO ] 2024-09-03 12:21:37.462 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Villas
-[INFO ] 2024-09-03 12:21:37.560 [main] Logs - {BaseClass} screenshot is captured
-[INFO ] 2024-09-03 12:21:37.757 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
-[INFO ] 2024-09-03 12:21:37.757 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:21:37.757 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:21:37.757 [main] Logs - {BaseClass} launching session for scenario Verify that user is able to see Browse By Property Types
-[ERROR] 2024-09-03 12:21:37.757 [main] Logs - {BaseClass} excludeScenarioWithFailedStep : Verify that user is able to see Browse By Property Types
-[INFO ] 2024-09-03 12:21:37.757 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:21:37.757 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[INFO ] 2024-09-03 12:21:37.757 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Hotels2
-[ERROR] 2024-09-03 12:21:37.757 [main] Logs - {BaseClass} clearSession is FAIL for scenario Verify that user is able to see Browse By Property Types
-[INFO ] 2024-09-03 12:21:37.757 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:21:37.757 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:21:37.757 [main] Logs - {BaseClass} launching session for scenario Verify that user is able to see Browse By Property Types
-[INFO ] 2024-09-03 12:21:37.757 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:21:38.398 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:21:40.526 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
-[INFO ] 2024-09-03 12:21:40.526 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:21:40.542 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:21:46.284 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:21:46.285 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Apartments
-[INFO ] 2024-09-03 12:21:47.356 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
-[INFO ] 2024-09-03 12:21:47.356 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:21:47.356 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:21:47.356 [main] Logs - {BaseClass} launching session for scenario Verify that user is able to see Browse By Property Types
-[INFO ] 2024-09-03 12:21:47.356 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:21:48.036 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:21:50.172 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
-[INFO ] 2024-09-03 12:21:50.172 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:21:50.192 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:21:55.608 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:21:55.609 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Resorts2
-[ERROR] 2024-09-03 12:22:00.897 [main] Logs - {BaseClass} FAILED STEP : I see Browse By Property Types Resorts2 { Scenario: Verify that user is able to see Browse By Property Types }
-[INFO ] 2024-09-03 12:22:00.984 [main] Logs - {BaseClass} screenshot is captured
-[INFO ] 2024-09-03 12:22:01.240 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
-[INFO ] 2024-09-03 12:22:01.240 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:22:01.242 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:22:01.242 [main] Logs - {BaseClass} launching session for scenario Verify that user is able to see Browse By Property Types
-[INFO ] 2024-09-03 12:22:01.242 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-03 12:22:01.915 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-03 12:22:03.960 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
-[INFO ] 2024-09-03 12:22:03.961 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-03 12:22:04.022 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-03 12:22:09.037 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-03 12:22:09.038 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Villas
-[INFO ] 2024-09-03 12:22:10.137 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
-[INFO ] 2024-09-03 12:22:10.137 [main] Logs - ================================================================================
-[INFO ] 2024-09-03 12:22:10.137 [main] Logs - {Hooks} trying to stop healenium server
-[INFO ] 2024-09-03 12:22:10.137 [main] Logs - {HealeniumRepository} stopping healenium server ...
-[INFO ] 2024-09-03 12:22:10.137 [main] Logs - {HealeniumRepository} command is : taskkill /F /PID 15744
-[INFO ] 2024-09-03 12:22:10.343 [main] Logs - {HealeniumRepository} response from command prompt is : SUCCESS: The process with PID 15744 has been terminated.
-[INFO ] 2024-09-03 12:22:10.374 [main] Logs - {HealeniumRepository} does Healenium log file exist ? false
-[INFO ] 2024-09-03 12:22:10.374 [main] Logs - {BaseClass} SUMMARY (All Failed Steps) : [I verify that invalid password error message is shown to the user, I see Browse By Property Types Hotels2, I see Browse By Property Types Resorts2, I see Your account is displayed]
+[INFO ] 2024-09-03 12:27:21.617 [main] Logs - {HealeniumRepository} trying to start healenium server
+[INFO ] 2024-09-03 12:27:21.620 [main] Logs - {HealeniumRepository} command is : D: && cd D:\healenium\shell-installation\web && "D:\healenium\shell-installation\web\start_healenium.sh"
+[INFO ] 2024-09-03 12:27:25.995 [main] Logs - {HealeniumRepository} response from command prompt is : null
+[INFO ] 2024-09-03 12:27:31.017 [main] Logs - {HealeniumRepository} Time spent (milliseconds)= 5014
+[INFO ] 2024-09-03 12:27:31.018 [main] Logs - {HealeniumRepository} fileSizeInKb = 5.27734375
+[INFO ] 2024-09-03 12:27:31.046 [main] Logs - {HealeniumRepository}  : --> 2024-09-03 09:57:30.230  INFO 17896 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat started on port 4596 (http) with context path '' 
+[INFO ] 2024-09-03 12:27:31.046 [main] Logs - {HealeniumRepository} isServerRunnng ? : Yes
+[INFO ] 2024-09-03 12:27:31.046 [main] Logs - {HealeniumRepository} PID is 17896
+[INFO ] 2024-09-03 12:27:31.047 [main] Logs - {HealeniumRepository} portNumber is 4596
+[INFO ] 2024-09-03 12:27:31.047 [main] Logs - {HealeniumRepository} Tomcat running on port 4596
+[INFO ] 2024-09-03 12:27:31.049 [main] Logs - {Hooks} updating healenium.properties with port : 4596
+[INFO ] 2024-09-03 12:27:31.049 [main] Logs - {Hooks} updated line --> hlm.server.url = http://localhost:4596
+[INFO ] 2024-09-03 12:27:31.051 [main] Logs - {BaseClass} Deleted ---> C:\Users\palek\git\TestometerBDDFrameWork1\bddframework\target\PDFReport\ExtentPdf.pdf
+[INFO ] 2024-09-03 12:27:31.206 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:27:31.206 [main] Logs - {BaseClass} launching session for scenario Verify that invalid passwords are identified
+[INFO ] 2024-09-03 12:27:31.207 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:27:32.716 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:27:34.735 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that invalid passwords are identified
+[INFO ] 2024-09-03 12:27:34.768 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:27:34.886 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:27:40.025 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:27:40.028 [main] Logs - {GetTestStepName} Current Step Name ---> I click Login
+[INFO ] 2024-09-03 12:27:43.683 [main] Logs - {GetTestStepName} Current Step Name ---> I enter username as mohanpalekar02@gmail.com
+[INFO ] 2024-09-03 12:27:45.501 [main] Logs - {GetTestStepName} Current Step Name ---> I enter password as 123456
+[INFO ] 2024-09-03 12:27:46.605 [main] Logs - {GetTestStepName} Current Step Name ---> I click on login button
+[INFO ] 2024-09-03 12:27:47.166 [main] Logs - {GetTestStepName} Current Step Name ---> I verify that invalid password error message is shown to the user
+[ERROR] 2024-09-03 12:27:52.257 [main] Logs - {BaseClass} FAILED STEP : I verify that invalid password error message is shown to the user { Scenario: Verify that invalid passwords are identified }
+[INFO ] 2024-09-03 12:27:52.358 [main] Logs - {BaseClass} screenshot is captured
+[INFO ] 2024-09-03 12:27:52.814 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that invalid passwords are identified
+[INFO ] 2024-09-03 12:27:52.814 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:27:52.910 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:27:52.910 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:27:52.910 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:27:53.643 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:27:55.982 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:27:55.983 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:27:56.006 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:28:01.879 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:28:01.880 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Stays
+[INFO ] 2024-09-03 12:28:02.415 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Flights
+[INFO ] 2024-09-03 12:28:02.971 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Flights+Hotel
+[INFO ] 2024-09-03 12:28:03.542 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Car rentals
+[INFO ] 2024-09-03 12:28:04.177 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Attractions
+[INFO ] 2024-09-03 12:28:04.744 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Airport taxis
+[INFO ] 2024-09-03 12:28:07.339 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:07.340 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:28:07.356 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:28:07.356 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:07.356 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:28:08.138 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:28:10.451 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:10.452 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:28:10.493 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:28:16.235 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:28:16.239 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Stays
+[INFO ] 2024-09-03 12:28:17.173 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:17.173 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:28:17.173 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:28:17.173 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:17.189 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:28:17.944 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:28:19.866 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:19.867 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:28:19.925 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:28:25.256 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:28:25.257 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Flights
+[INFO ] 2024-09-03 12:28:25.975 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:25.975 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:28:25.975 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:28:25.975 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:25.975 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:28:26.641 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:28:29.098 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:29.098 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:28:29.148 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:28:34.719 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:28:34.721 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Flights+Hotel
+[INFO ] 2024-09-03 12:28:35.422 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:35.422 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:28:35.422 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:28:35.422 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:35.422 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:28:36.083 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:28:38.004 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:38.004 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:28:38.026 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:28:43.759 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:28:43.759 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Car rentals
+[INFO ] 2024-09-03 12:28:44.428 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:44.428 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:28:44.428 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:28:44.428 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:44.428 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:28:45.080 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:28:47.158 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:47.158 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:28:47.183 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:28:52.524 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:28:52.525 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Attractions
+[INFO ] 2024-09-03 12:28:53.185 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:53.185 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:28:53.188 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:28:53.188 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:53.188 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:28:53.858 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:28:56.165 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:28:56.165 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:28:56.184 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:29:01.284 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:29:01.285 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Airport taxis
+[INFO ] 2024-09-03 12:29:01.961 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:01.961 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:29:01.961 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:29:01.961 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:01.966 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:29:02.610 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:29:04.809 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:04.809 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:29:04.839 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:29:09.888 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:29:09.889 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Stays
+[INFO ] 2024-09-03 12:29:10.541 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:10.541 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:29:10.541 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:29:10.545 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:10.545 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:29:11.178 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:29:13.080 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:13.081 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:29:13.191 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:29:18.600 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:29:18.601 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Flights
+[INFO ] 2024-09-03 12:29:19.317 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:19.317 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:29:19.317 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:29:19.317 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:19.317 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:29:19.951 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:29:21.824 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:21.824 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:29:21.863 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:29:27.350 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:29:27.351 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Flights+Hotel
+[INFO ] 2024-09-03 12:29:28.118 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:28.118 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:29:28.118 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:29:28.118 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:28.118 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:29:28.783 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:29:31.466 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:31.466 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:29:31.484 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:29:36.919 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:29:36.920 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Car rentals
+[INFO ] 2024-09-03 12:29:37.665 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:37.665 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:29:37.665 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:29:37.665 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:37.665 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:29:38.321 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:29:40.166 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:40.167 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:29:40.227 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:29:45.888 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:29:45.889 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Attractions
+[INFO ] 2024-09-03 12:29:46.597 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:46.597 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:29:46.601 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:29:46.601 [main] Logs - {BaseClass} launching session for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:46.601 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:29:47.250 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:29:49.877 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:49.878 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:29:49.925 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:29:55.179 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:29:55.180 [main] Logs - {GetTestStepName} Current Step Name ---> I see the features called Airport taxis
+[INFO ] 2024-09-03 12:29:55.800 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that main features is the site are displayed to the user
+[INFO ] 2024-09-03 12:29:55.800 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:29:55.806 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:29:55.806 [main] Logs - {BaseClass} launching session for scenario Verify that the login is successful
+[INFO ] 2024-09-03 12:29:55.806 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:29:56.454 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:29:56.998 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that the login is successful
+[INFO ] 2024-09-03 12:29:57.000 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:29:58.592 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:30:03.611 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:30:03.611 [main] Logs - {GetTestStepName} Current Step Name ---> I click Login
+[INFO ] 2024-09-03 12:30:10.391 [main] Logs - {GetTestStepName} Current Step Name ---> I enter username as mohanpalekar02@gmail.com
+[INFO ] 2024-09-03 12:30:11.423 [main] Logs - {GetTestStepName} Current Step Name ---> I enter password as Stble1245%
+[INFO ] 2024-09-03 12:30:13.003 [main] Logs - {GetTestStepName} Current Step Name ---> I click on login button
+[INFO ] 2024-09-03 12:30:13.491 [main] Logs - {GetTestStepName} Current Step Name ---> I click Press and Hold when asked if I am Robot
+[INFO ] 2024-09-03 12:30:14.162 [main] Logs - {GetTestStepName} Current Step Name ---> I see Your account is displayed
+[ERROR] 2024-09-03 12:30:14.849 [main] Logs - {BaseClass} FAILED STEP : I see Your account is displayed { Scenario: Verify that the login is successful }
+[INFO ] 2024-09-03 12:30:14.923 [main] Logs - {BaseClass} screenshot is captured
+[INFO ] 2024-09-03 12:30:15.275 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that the login is successful
+[INFO ] 2024-09-03 12:30:15.275 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:30:15.286 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:30:15.286 [main] Logs - {BaseClass} launching session for scenario Verify that user is able to see Browse By Property Types
+[INFO ] 2024-09-03 12:30:15.286 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:30:16.032 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:30:22.043 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
+[INFO ] 2024-09-03 12:30:22.043 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:30:22.049 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:30:27.582 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:30:27.583 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Hotels2
+[ERROR] 2024-09-03 12:30:32.867 [main] Logs - {BaseClass} FAILED STEP : I see Browse By Property Types Hotels2 { Scenario: Verify that user is able to see Browse By Property Types }
+[INFO ] 2024-09-03 12:30:32.867 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Apartments
+[INFO ] 2024-09-03 12:30:32.868 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Resorts
+[INFO ] 2024-09-03 12:30:32.868 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Villas
+[INFO ] 2024-09-03 12:30:32.948 [main] Logs - {BaseClass} screenshot is captured
+[INFO ] 2024-09-03 12:30:33.158 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
+[INFO ] 2024-09-03 12:30:33.158 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:30:33.158 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:30:33.158 [main] Logs - {BaseClass} launching session for scenario Verify that user is able to see Browse By Property Types
+[ERROR] 2024-09-03 12:30:33.158 [main] Logs - {BaseClass} excludeScenarioWithFailedStep : Verify that user is able to see Browse By Property Types
+[INFO ] 2024-09-03 12:30:33.158 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:30:33.158 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[INFO ] 2024-09-03 12:30:33.158 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Hotels2
+[ERROR] 2024-09-03 12:30:33.158 [main] Logs - {BaseClass} clearSession is FAIL for scenario Verify that user is able to see Browse By Property Types
+[INFO ] 2024-09-03 12:30:33.158 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:30:33.168 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:30:33.168 [main] Logs - {BaseClass} launching session for scenario Verify that user is able to see Browse By Property Types
+[INFO ] 2024-09-03 12:30:33.168 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:30:34.561 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:30:43.358 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
+[INFO ] 2024-09-03 12:30:43.358 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:30:43.370 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:30:49.051 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:30:49.052 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Apartments
+[INFO ] 2024-09-03 12:30:50.244 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
+[INFO ] 2024-09-03 12:30:50.244 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:30:50.244 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:30:50.244 [main] Logs - {BaseClass} launching session for scenario Verify that user is able to see Browse By Property Types
+[INFO ] 2024-09-03 12:30:50.244 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:30:50.898 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:30:53.354 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
+[INFO ] 2024-09-03 12:30:53.355 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:30:53.363 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:30:59.014 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:30:59.015 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Resorts2
+[ERROR] 2024-09-03 12:31:04.319 [main] Logs - {BaseClass} FAILED STEP : I see Browse By Property Types Resorts2 { Scenario: Verify that user is able to see Browse By Property Types }
+[INFO ] 2024-09-03 12:31:04.493 [main] Logs - {BaseClass} screenshot is captured
+[INFO ] 2024-09-03 12:31:04.715 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
+[INFO ] 2024-09-03 12:31:04.715 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:31:04.715 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:31:04.715 [main] Logs - {BaseClass} launching session for scenario Verify that user is able to see Browse By Property Types
+[INFO ] 2024-09-03 12:31:04.715 [main] Logs - {SelfHealingWebDriverFactory} chrome
+[INFO ] 2024-09-03 12:31:05.391 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
+[INFO ] 2024-09-03 12:31:08.010 [main] Logs - {BaseClass} launchSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
+[INFO ] 2024-09-03 12:31:08.010 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 12:31:08.033 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[ERROR] 2024-09-03 12:31:13.737 [main] Logs - {LandingPageLocators} PopUp is not displayed
+[INFO ] 2024-09-03 12:31:13.738 [main] Logs - {GetTestStepName} Current Step Name ---> I see Browse By Property Types Villas
+[INFO ] 2024-09-03 12:31:15.027 [main] Logs - {BaseClass} clearSession is SUCCESS for scenario Verify that user is able to see Browse By Property Types
+[INFO ] 2024-09-03 12:31:15.027 [main] Logs - ================================================================================
+[INFO ] 2024-09-03 12:31:15.029 [main] Logs - {Hooks} trying to stop healenium server
+[INFO ] 2024-09-03 12:31:15.029 [main] Logs - {HealeniumRepository} stopping healenium server ...
+[INFO ] 2024-09-03 12:31:15.029 [main] Logs - {HealeniumRepository} command is : taskkill /F /PID 17896
+[INFO ] 2024-09-03 12:31:15.210 [main] Logs - {HealeniumRepository} response from command prompt is : SUCCESS: The process with PID 17896 has been terminated.
+[INFO ] 2024-09-03 12:31:15.222 [main] Logs - {HealeniumRepository} does Healenium log file exist ? false
+[INFO ] 2024-09-03 12:31:15.222 [main] Logs - {BaseClass} SUMMARY (All Failed Steps) : [I verify that invalid password error message is shown to the user, I see Browse By Property Types Hotels2, I see Browse By Property Types Resorts2, I see Your account is displayed]

@@ -32,6 +32,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
 import io.cucumber.plugin.event.PickleStepTestStep;
+import io.cucumber.plugin.event.Step;
 import io.cucumber.plugin.event.TestCase;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.AddressException;
@@ -121,7 +122,7 @@ public class Hooks {
 
 		if (scenario.isFailed()) {
 			failedSteps.add(GetTestStepName.currentStepName);
-			Logs.getLog().getLogger().error("{BaseClass} FAILED STEP : "+GetTestStepName.currentStepName+" { Scenario: "+scenario.getName()+" }");
+			Logs.getLog().getLogger().error("{BaseClass} ADDED FAILED STEP : "+GetTestStepName.currentStepName+" { Scenario: "+scenario.getName()+" }");
 
 		}
 
