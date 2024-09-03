@@ -218,7 +218,7 @@ public class HealeniumRepository implements HealeniumRepositoryInterface{
 			double fileSizeInKb= (double) file.length() / 1024;
 			if( fileSizeInKb > 5) {
 				endTime = System.currentTimeMillis();
-				Logs.getLog().getLogger().info("{HealeniumRepository} Time spent = "+(endTime-startTime));
+				Logs.getLog().getLogger().info("{HealeniumRepository} Time spent (milliseconds)= "+(endTime-startTime));
 				Logs.getLog().getLogger().info("{HealeniumRepository} fileSizeInKb = "+fileSizeInKb);
 				break;
 			}else {

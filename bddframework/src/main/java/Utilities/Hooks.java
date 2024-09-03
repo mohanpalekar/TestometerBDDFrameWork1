@@ -56,6 +56,8 @@ public class Hooks {
 
 	@BeforeAll
 	public static void cleanOldFiles() throws IOException, InterruptedException, FailedToStartHealeniumServer, InvalidPortException {
+		
+		startTime = System.currentTimeMillis();
 
 		File [] files1 = new File[2];
 
@@ -74,8 +76,6 @@ public class Hooks {
 			updatePortInHealeniumProperties(healenumPropertiesFile);
 		}
 
-		startTime = System.currentTimeMillis();
-
 		final File folder = new File(System.getProperty("user.dir") + "/target/PDFReport");
 		final File[] files = folder.listFiles();
 		for (final File file : files) {
@@ -93,6 +93,10 @@ public class Hooks {
 	@Before
 	public void launchSession(Scenario scenario) throws NoSuchFieldException, SecurityException,
 	IllegalArgumentException, IllegalAccessException, AlreadyFailedTestStepException, DriverFailedToCreateException {
+		
+		Logs.getLog().getLogger().info("================================================================================");
+		
+		Logs.getLog().getLogger().info("{BaseClass} launching session for scenario "+scenario.getName());
 
 		excludeScenarioWithFailedStep(scenario);
 
@@ -107,7 +111,7 @@ public class Hooks {
 
 		driver.get(System.getProperty("siteUrl"));
 
-		Logs.getLog().getLogger().info("{BaseClass} launchSession is success");
+		Logs.getLog().getLogger().info("{BaseClass} launchSession is SUCCESS for scenario "+scenario.getName());
 
 	}
 
@@ -116,8 +120,8 @@ public class Hooks {
 			throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 
 		if (scenario.isFailed()) {
-			failedSteps.add(GetTestStepName.currentStepName+" { "+scenario.getName()+" }");
-			Logs.getLog().getLogger().error("{BaseClass} FAILED STEP : "+GetTestStepName.currentStepName);
+			failedSteps.add(GetTestStepName.currentStepName);
+			Logs.getLog().getLogger().error("{BaseClass} FAILED STEP : "+GetTestStepName.currentStepName+" { Scenario: "+scenario.getName()+" }");
 
 		}
 
@@ -150,14 +154,17 @@ public class Hooks {
 
 				DriverFactory.getInstance().closeBrowser();
 
-				Logs.getLog().getLogger().info("{BaseClass} clearSession is success");
+				Logs.getLog().getLogger().info("{BaseClass} clearSession is SUCCESS for scenario "+scenario.getName());
 
 			}else {
 				totalFailedScenarios++;
-
-				isAlreadyFailedTestStep = false;
 			}
+		}else {
+			Logs.getLog().getLogger().error("{BaseClass} clearSession is FAIL for scenario "+scenario.getName());
+
 		}
+		
+		Logs.getLog().getLogger().info("================================================================================");
 
 	}
 
@@ -168,6 +175,8 @@ public class Hooks {
 	public static void setTestResults() throws AddressException, MessagingException, IOException, InterruptedException {
 
 		try (FileOutputStream out = new FileOutputStream("testResults.properties")) {
+			
+			finishTime = System.currentTimeMillis();
 
 			Properties props = new Properties();
 
@@ -175,7 +184,7 @@ public class Hooks {
 
 			props.setProperty("totalScenarios", String.valueOf(totalScenarios));
 			props.setProperty("totalFailedScenarios", String.valueOf(totalFailedScenarios));
-			props.setProperty("timeTaken", String.valueOf(timeTaken)+" (seconds)");
+			props.setProperty("timeTaken", String.valueOf(timeTaken)+" (minutes)");
 			props.store(out, "Added test results counts");
 
 		}
@@ -183,8 +192,8 @@ public class Hooks {
 		String command = "taskkill /F /PID "+healeniumServerData[0];
 		File healeniumLogFile = new File("D:\\healenium\\shell-installation\\web\\logs\\healenium-backend.log");
 		Hooks.stopHealeniumServer(healeniumLogFile, command);
-		
-		Logs.getLog().getLogger().info("{BaseClass} SUMMARY (All Failed Steps) : ");
+
+		Logs.getLog().getLogger().info("{BaseClass} SUMMARY (All Failed Steps) : "+failedSteps);
 
 	}
 
@@ -219,10 +228,12 @@ public class Hooks {
 			});}).reduce("", (a,b)->(a + "\n" + b));
 
 		if (count > 0) {
-
+			Logs.getLog().getLogger().error("{BaseClass} excludeScenarioWithFailedStep : "+scenario.getName());
 			isAlreadyFailedTestStep = true;
 			throw new AlreadyFailedTestStepException("This scenario contains these already failed step(s).\n"+stepsFailed);
 
+		}else {
+			isAlreadyFailedTestStep = false;
 		}
 	}
 
