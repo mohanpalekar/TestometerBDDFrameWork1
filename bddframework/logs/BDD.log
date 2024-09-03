@@ -1,31 +1,30 @@
-[INFO ] 2024-09-02 23:34:55.106 [main] Logs - {HealeniumRepository} trying to start healenium server
-[INFO ] 2024-09-02 23:34:55.111 [main] Logs - {HealeniumRepository} command is : D: && cd D:\healenium\shell-installation\web && "D:\healenium\shell-installation\web\start_healenium.sh"
-[INFO ] 2024-09-02 23:35:02.056 [main] Logs - {HealeniumRepository} response from command prompt is : null
-[INFO ] 2024-09-02 23:35:12.112 [main] Logs - {HealeniumRepository}  : --> 2024-09-02 21:05:07.391  INFO 14608 - [       main] c.epam.healenium.Application     : Started Application in 10.614 seconds (process running for 11.441) 
-[INFO ] 2024-09-02 23:35:12.112 [main] Logs - {HealeniumRepository}  : --> 2024-09-02 21:05:07.269  INFO 14608 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat started on port 4596 (http) with context path '' 
-[INFO ] 2024-09-02 23:35:12.113 [main] Logs - {HealeniumRepository} isServerRunnng ? : Yes
-[INFO ] 2024-09-02 23:35:12.120 [main] Logs - {HealeniumRepository} PID is 14608
-[INFO ] 2024-09-02 23:35:12.122 [main] Logs - {HealeniumRepository} portNumber is 4596
-[INFO ] 2024-09-02 23:35:12.123 [main] Logs - {HealeniumRepository} Tomcat running on port 4596
-[INFO ] 2024-09-02 23:35:12.127 [main] Logs - {HealeniumRepository} updating healenium.properties with port : 4596
-[INFO ] 2024-09-02 23:35:12.127 [main] Logs - {HealeniumRepository} updated line --> hlm.server.url = http://localhost:4596
-[INFO ] 2024-09-02 23:35:12.131 [main] Logs - {BaseClass} Deleted ---> C:\Users\palek\git\TestometerBDDFrameWork1\bddframework\target\PDFReport\ExtentPdf.pdf
-[INFO ] 2024-09-02 23:35:12.402 [main] Logs - {SelfHealingWebDriverFactory} chrome
-[INFO ] 2024-09-02 23:35:14.651 [main] Logs - {SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : chrome
-[INFO ] 2024-09-02 23:35:17.103 [main] Logs - {BaseClass} launchSession is success
-[INFO ] 2024-09-02 23:35:17.133 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
-[INFO ] 2024-09-02 23:35:17.177 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
-[ERROR] 2024-09-02 23:35:23.459 [main] Logs - {LandingPageLocators} PopUp is not displayed
-[INFO ] 2024-09-02 23:35:23.467 [main] Logs - {GetTestStepName} Current Step Name ---> I click Login
-[INFO ] 2024-09-02 23:35:27.551 [main] Logs - {GetTestStepName} Current Step Name ---> I enter username as mohanpalekar02@gmail.com
-[INFO ] 2024-09-02 23:35:28.983 [main] Logs - {GetTestStepName} Current Step Name ---> I enter password as Stble1245%
-[INFO ] 2024-09-02 23:35:30.210 [main] Logs - {GetTestStepName} Current Step Name ---> I click on login button
-[INFO ] 2024-09-02 23:35:31.884 [main] Logs - {GetTestStepName} Current Step Name ---> I click Press and Hold when asked if I am Robot
-[INFO ] 2024-09-02 23:35:32.810 [main] Logs - {GetTestStepName} Current Step Name ---> I see Your account is displayed
-[ERROR] 2024-09-02 23:35:33.747 [main] Logs - {BaseClass} FAILED STEP : I see Your account is displayed
-[INFO ] 2024-09-02 23:35:33.876 [main] Logs - {BaseClass} screenshot is captured
-[INFO ] 2024-09-02 23:35:34.323 [main] Logs - {BaseClass} clearSession is success
-[INFO ] 2024-09-02 23:35:34.348 [main] Logs - {HealeniumRepository} stopping healenium server ...
-[INFO ] 2024-09-02 23:35:34.350 [main] Logs - {HealeniumRepository} command is : taskkill /F /PID 14608
-[INFO ] 2024-09-02 23:35:34.531 [main] Logs - {HealeniumRepository} response from command prompt is : SUCCESS: The process with PID 14608 has been terminated.
-[INFO ] 2024-09-02 23:35:44.549 [main] Logs - {HealeniumRepository} does Healenium log file exist ? false
+[INFO ] 2024-09-03 10:03:32.296 [main] Logs - {HealeniumRepository} trying to start healenium server
+[INFO ] 2024-09-03 10:03:32.299 [main] Logs - {HealeniumRepository} command is : D: && cd D:\healenium\shell-installation\web && "D:\healenium\shell-installation\web\start_healenium.sh"
+[INFO ] 2024-09-03 10:03:36.700 [main] Logs - {HealeniumRepository} response from command prompt is : null
+[INFO ] 2024-09-03 10:03:41.717 [main] Logs - {HealeniumRepository} Time spent = 5009
+[INFO ] 2024-09-03 10:03:41.719 [main] Logs - {HealeniumRepository} fileSizeInKb = 5.2783203125
+[INFO ] 2024-09-03 10:03:41.752 [main] Logs - {HealeniumRepository}  : --> 2024-09-03 07:33:41.004  INFO 15604 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat started on port 4596 (http) with context path '' 
+[INFO ] 2024-09-03 10:03:41.752 [main] Logs - {HealeniumRepository} isServerRunnng ? : Yes
+[INFO ] 2024-09-03 10:03:41.753 [main] Logs - {HealeniumRepository} PID is 15604
+[INFO ] 2024-09-03 10:03:41.753 [main] Logs - {HealeniumRepository} portNumber is 4596
+[INFO ] 2024-09-03 10:03:41.754 [main] Logs - {HealeniumRepository} Tomcat running on port 4596
+[INFO ] 2024-09-03 10:03:41.755 [main] Logs - {Hooks} updating healenium.properties with port : 4596
+[INFO ] 2024-09-03 10:03:41.756 [main] Logs - {Hooks} updated line --> hlm.server.url = http://localhost:4596
+[INFO ] 2024-09-03 10:03:41.758 [main] Logs - {BaseClass} Deleted ---> C:\Users\palek\git\TestometerBDDFrameWork1\bddframework\target\PDFReport\ExtentPdf.pdf
+[INFO ] 2024-09-03 10:03:41.906 [main] Logs - {SelfHealingWebDriverFactory} chromee
+[ERROR] 2024-09-03 10:03:41.907 [main] Logs - {SelfHealingWebDriverFactory} ERROR --> Invalid browserName {default} : chromee
+[ERROR] 2024-09-03 10:03:41.956 [main] Logs - {SelfHealingWebDriverFactory} ERROR --> Invalid browserName {Exception}: chromee
+[ERROR] 2024-09-03 10:03:41.956 [main] Logs - {SelfHealingWebDriverFactory} ERROR --> getWebDriverSession is failure : chromee
+[INFO ] 2024-09-03 10:03:41.965 [main] Logs - {GetTestStepName} Current Step Name ---> I am on the landing page
+[INFO ] 2024-09-03 10:03:41.973 [main] Logs - {GetTestStepName} Current Step Name ---> I close the popup when I see it
+[INFO ] 2024-09-03 10:03:41.976 [main] Logs - {GetTestStepName} Current Step Name ---> I click Login
+[INFO ] 2024-09-03 10:03:41.979 [main] Logs - {GetTestStepName} Current Step Name ---> I enter username as mohanpalekar02@gmail.com
+[INFO ] 2024-09-03 10:03:41.982 [main] Logs - {GetTestStepName} Current Step Name ---> I enter password as Stble1245%
+[INFO ] 2024-09-03 10:03:41.983 [main] Logs - {GetTestStepName} Current Step Name ---> I click on login button
+[INFO ] 2024-09-03 10:03:41.983 [main] Logs - {GetTestStepName} Current Step Name ---> I click Press and Hold when asked if I am Robot
+[INFO ] 2024-09-03 10:03:41.985 [main] Logs - {GetTestStepName} Current Step Name ---> I see Your account is displayed
+[INFO ] 2024-09-03 10:03:42.006 [main] Logs - {Hooks} trying to stop healenium server
+[INFO ] 2024-09-03 10:03:42.006 [main] Logs - {HealeniumRepository} stopping healenium server ...
+[INFO ] 2024-09-03 10:03:42.006 [main] Logs - {HealeniumRepository} command is : taskkill /F /PID 15604
+[INFO ] 2024-09-03 10:03:42.168 [main] Logs - {HealeniumRepository} response from command prompt is : SUCCESS: The process with PID 15604 has been terminated.
+[INFO ] 2024-09-03 10:03:42.181 [main] Logs - {HealeniumRepository} does Healenium log file exist ? false

@@ -20,7 +20,7 @@ public class SelfHealingWebDriverFactory implements WebDriverFactoryInterface{
 	}
 
 	@Override
-	public WebDriver getDriver(String browserName) {
+	public WebDriver getDriver(String browserName) throws DriverFailedToCreateException {
 
 		Logs.getLog().getLogger().info("{SelfHealingWebDriverFactory} " +System.getProperty("browser"));
 
@@ -51,19 +51,20 @@ public class SelfHealingWebDriverFactory implements WebDriverFactoryInterface{
 				break;
 
 			default:
-				Logs.getLog().getLogger().error("{SelfHealingWebDriverFactory} ERROR --> Invalid browserName : "+browserName);
+				Logs.getLog().getLogger().error("{SelfHealingWebDriverFactory} ERROR --> Invalid browserName {default} : "+browserName);
 			}
 
 			//create Self-healing driver
 			driver = SelfHealingDriver.create(delegate);
 
 		}catch(Exception ex) {
-			Logs.getLog().getLogger().error("{SelfHealingWebDriverFactory} ERROR --> Invalid browserName : "+browserName);
+			Logs.getLog().getLogger().error("{SelfHealingWebDriverFactory} ERROR --> Invalid browserName {Exception}: "+browserName);
 		}
 		if(driver != null) {
 			Logs.getLog().getLogger().info("{SelfHealingWebDriverFactory} INFO --> getWebDriverSession is success : "+browserName);
 		}else {
 			Logs.getLog().getLogger().error("{SelfHealingWebDriverFactory} ERROR --> getWebDriverSession is failure : "+browserName);
+			throw new DriverFailedToCreateException("{SelfHealingWebDriverFactory} ERROR --> Failed to create driver");
 
 		}
 		return driver;

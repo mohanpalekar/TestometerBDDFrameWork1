@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -30,6 +31,8 @@ public class HealeniumRepository implements HealeniumRepositoryInterface{
 		Logs.getLog().getLogger().info("{HealeniumRepository} trying to start healenium server");
 
 		runCommand(command);
+
+		waitTillLogsAreCreated(file[1]);
 
 		serverData = getServerData(file[1]);
 
@@ -66,9 +69,9 @@ public class HealeniumRepository implements HealeniumRepositoryInterface{
 		Logs.getLog().getLogger().info("{HealeniumRepository} stopping healenium server ...");
 
 		runCommand(command);
-		
+
 		Files.deleteIfExists(logs.getAbsoluteFile().toPath());
-		
+
 		Logs.getLog().getLogger().info("{HealeniumRepository} does Healenium log file exist ? "+logs.exists());
 
 	}
@@ -95,7 +98,7 @@ public class HealeniumRepository implements HealeniumRepositoryInterface{
 				while((ch = fr.readLine()) != null) {
 
 					if(ch.contains("Tomcat started on port")) {
-						
+
 						Logs.getLog().getLogger().info("{HealeniumRepository}  : --> "+ch);
 
 						Logs.getLog().getLogger().info("{HealeniumRepository} isServerRunnng ? : Yes");
@@ -204,7 +207,26 @@ public class HealeniumRepository implements HealeniumRepositoryInterface{
 
 		p.waitFor();
 
-		Thread.sleep(10000);
+		//Thread.sleep(Duration.ofSeconds(10));
+
+	}
+
+	private void waitTillLogsAreCreated(File file) throws InterruptedException {
+		long startTime = System.currentTimeMillis();
+		long endTime = 0;
+		while((endTime-startTime) <= 60000) {
+			double fileSizeInKb= (double) file.length() / 1024;
+			if( fileSizeInKb > 5) {
+				endTime = System.currentTimeMillis();
+				Logs.getLog().getLogger().info("{HealeniumRepository} Time spent = "+(endTime-startTime));
+				Logs.getLog().getLogger().info("{HealeniumRepository} fileSizeInKb = "+fileSizeInKb);
+				break;
+			}else {
+				Thread.sleep(Duration.ofSeconds(5));
+				endTime = System.currentTimeMillis();
+				continue;
+			}
+		}
 
 	}
 

@@ -53,7 +53,7 @@ public class Hooks {
 	private static HealeniumRepositoryInterface Hooks = new HealeniumRepository();
 
 	private String browserName = System.getProperty("browser").toLowerCase();
-	
+
 	@BeforeAll
 	public static void cleanOldFiles() throws IOException, InterruptedException, FailedToStartHealeniumServer, InvalidPortException {
 
@@ -68,7 +68,7 @@ public class Hooks {
 		String command = "D: && cd D:\\healenium\\shell-installation\\web && \"D:\\healenium\\shell-installation\\web\\start_healenium.sh\""; 
 
 		healeniumServerData = Hooks.startHealeniumServer(files1, command);
-		
+
 		if(healeniumServerData[0] != -1) {
 			File healenumPropertiesFile = new File(System.getProperty("user.dir")+"\\src\\test\\resources\\healenium.properties");
 			updatePortInHealeniumProperties(healenumPropertiesFile);
@@ -92,7 +92,7 @@ public class Hooks {
 	// start when test case starts
 	@Before
 	public void launchSession(Scenario scenario) throws NoSuchFieldException, SecurityException,
-	IllegalArgumentException, IllegalAccessException, AlreadyFailedTestStepException {
+	IllegalArgumentException, IllegalAccessException, AlreadyFailedTestStepException, DriverFailedToCreateException {
 
 		excludeScenarioWithFailedStep(scenario);
 
@@ -127,39 +127,42 @@ public class Hooks {
 	@After
 	public void clearSession(Scenario scenario) {
 
-		totalScenarios++;
+		if(driver != null) {
 
-		// WebDriver currentDriver = (DriverFactory.getInstance().getWebDriver());
+			totalScenarios++;
 
-		if(!isAlreadyFailedTestStep) {
+			// WebDriver currentDriver = (DriverFactory.getInstance().getWebDriver());
 
-			if (scenario.isFailed()) {
+			if(!isAlreadyFailedTestStep) {
 
+				if (scenario.isFailed()) {
+
+					totalFailedScenarios++;
+
+					final WebDriver delegatedDriver = ((SelfHealingDriver) driver).getDelegate();
+
+					byte[] screenshot = ((TakesScreenshot) delegatedDriver).getScreenshotAs(OutputType.BYTES);
+
+					scenario.attach(screenshot, "image/png", scenario.getName());
+
+					Logs.getLog().getLogger().info("{BaseClass} screenshot is captured");
+				}
+
+				DriverFactory.getInstance().closeBrowser();
+
+				Logs.getLog().getLogger().info("{BaseClass} clearSession is success");
+
+			}else {
 				totalFailedScenarios++;
 
-				final WebDriver delegatedDriver = ((SelfHealingDriver) driver).getDelegate();
-
-				byte[] screenshot = ((TakesScreenshot) delegatedDriver).getScreenshotAs(OutputType.BYTES);
-
-				scenario.attach(screenshot, "image/png", scenario.getName());
-
-				Logs.getLog().getLogger().info("{BaseClass} screenshot is captured");
+				isAlreadyFailedTestStep = false;
 			}
-
-			DriverFactory.getInstance().closeBrowser();
-
-			Logs.getLog().getLogger().info("{BaseClass} clearSession is success");
-
-		}else {
-			totalFailedScenarios++;
-
-			isAlreadyFailedTestStep = false;
 		}
 
 	}
 
 
-	
+
 
 	@AfterAll
 	public static void setTestResults() throws AddressException, MessagingException, IOException, InterruptedException {
@@ -220,7 +223,7 @@ public class Hooks {
 
 		}
 	}
-	
+
 	private static void updatePortInHealeniumProperties(File f1) throws IOException {
 
 		List<String> lines = new ArrayList<String>();
